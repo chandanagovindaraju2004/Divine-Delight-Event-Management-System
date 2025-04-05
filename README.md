@@ -35,7 +35,9 @@ JavaScript
 
 #Screnshots:
 ![image](https://github.com/user-attachments/assets/b28946fd-2932-4f28-9959-0f322c5058cf)
-![image](https://github.com/user-attachments/assets/ffd67013-782a-4b36-b833-e3e50df26326)
+
+![image](https://github.com/user-attachments/assets/7ed183f1-bfb5-4b36-9159-c3f62807289d)
+
 ![image](https://github.com/user-attachments/assets/5dc53465-f5fb-4484-bc78-73aac0c41431)
 
 
