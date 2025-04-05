@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Ashwah Events</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #b88bb6;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .logo p {
+            font-size: 14px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d9a7c7;
+        }
+
+        .call-now-btn {
+            background-color: #d9a7c7;
+            color: #450b2c;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .call-now-btn:hover {
+            background-color: #b76e8d;
+        }
+
+        /* Banner */
+        .banner {
+            
+            color: #32023b;
+            text-align: center;
+            padding: 80px 0;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .banner p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 20px;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Event Highlight Section */
+        .event-highlight {
+            background-color: #eee0e8;
+            color: #000000;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .event-highlight h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .event-highlight p {
+            font-size: 18px;
+        }
+
+        .talk-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #d9a7c7;
+            color: #450b2c;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .talk-btn:hover {
+            background-color: #b76e8d;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #450b2c;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>DIVINE DelighT</h1>
+            <p>Events and Productions</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+           
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>GALLERY</h1>
+        <p>Glimpses of our dedicated efforts to make it a memorable event for you.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <img src="1.jpg" alt="Event Image 1">
+        <img src="2.jpg" alt="Event Image 2">
+        <img src="3.jpg" alt="Event Image 3">
+        <img src="4.jpg" alt="Event Image 4">
+        <img src="5.jpg" alt="Event Image 4">
+        <img src="6.jpg" alt="Event Image 4">
+    </section>
+
+    <!-- Event Highlight -->
+    <section class="event-highlight">
+        <h2>Every event is beautiful,<br>we make it unique!</h2>
+        <a href="contact.html" class="talk-btn">LET'S TALK!</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>No 769, 1st cross, 1st main, Devanahalli Town,
+            Bangalore Rural 562110 | Contact: +91-6360891235 | Email: info@divinedelightevents.com</p>
+        <p>Copyright © 2024 Divine Delights Events and Productions</p>
+    </footer>
+</body>
+</html>

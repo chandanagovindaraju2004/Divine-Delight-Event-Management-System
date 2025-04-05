@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        /* General Reset and Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background: #b88bb6;
+            color: #fff;
+        }
+
+        header .logo h1 {
+            color: #fff;
+            font-size: 32px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e9e5e9;
+        }
+
+        /* Services Section */
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #333;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            margin: 10px auto;
+            background-color: #d6a2e8;
+        }
+
+        .intro {
+            text-align: center;
+            margin: 0 auto 20px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* Service Items */
+        .service-item {
+            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            background-color: #fff;
+            max-width: 100%;
+        }
+
+        .service-item img {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 20px;
+        }
+
+        .service-item h2 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #d6a2e8;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #b05fc6;
+        }
+
+        /* WhatsApp Icon */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+        }
+
+        .whatsapp img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #27031f;
+            color: #ddd;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #b88bb6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Divine Delight</h1>
+        </div>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="about-us.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h1>Our Services</h1>
+        <div class="intro">
+            <p>
+                We offer a wide range of event management services to make it a memorable experience for you. 
+                At Divine Delight, we believe in a client-first approach and take care of the entire spectrum of activities 
+                involved in organizing unforgettable events for you and your guests.
+            </p>
+        </div>
+        <div class="service-item">
+            <img src="wedding.JPG" alt="Corporate Events">
+            <h2>Traditional Wedding</h2>
+            <a href="booknow.html" class="btn">BOOK NOW →</a>
+        </div>
+        <div class="service-item">
+            
+            <img src="11.JPG" alt="Corporate Events">
+            <h2>Reception</h2>
+            <a href="booknow.html" class="btn">BOOK NOW →</a>
+        </div>
+        
+        <div class="service-item">
+            <img src="corporate-events.jpg" alt="Corporate Events">
+            <h2>Corporate Events</h2>
+            <a href="booknow.html" class="btn">BOOK NOW →</a>
+        </div>
+        <div class="service-item">
+            <img src="12.JPG" alt="Corporate Events">
+            <h2>Babby Shower</h2>
+            <a href="booknow.html" class="btn">BOOK NOW →</a>
+        </div>
+        <div class="service-item">
+            <img src="17.JPG" alt="Corporate Events">
+            <h2>Naming Ceremony</h2>
+            <a href="booknow.html" class="btn">BOOK NOW →</a>
+        </div>
+        <!-- Service 2: Personalized Events -->
+        <div class="service-item">
+            <img src="personalized-events.jpg" alt="Personalized Events">
+            <h2>Personalized Events</h2>
+            <a href="booknow.html" class="btn">BOOK NOW →</a>
+        </div>
+
+        <!-- Service 3: Community Carnivals -->
+        <div class="service-item">
+            <img src="community-carnivals.jpg" alt="Community Carnivals">
+            <h2>Community Carnivals</h2>
+            <a href="booknow.html" class="btn">BOOK NOW →</a>
+        </div>
+
+        <!-- WhatsApp Icon -->
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>No 769, 1st cross, 1st main, Devanahalli Town,  
+            Bangalore Rural 562110 | Contact: +91-6360891235 | Email: <a href="mailto:info@divinedelightevents.com">info@divinedelightevents.com</a>
+        </p>
+        <p>Copyright &copy; 2024 Divine Delight Events and Productions</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Booking Form</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background: #b88bb6;
+      color: #fffdfd;
+    }
+
+    header .logo h1 {
+      color: #f8f4f8;
+      font-size: 32px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fafafa;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #e9e5e9;
+    }
+
+    .form-container {
+      background-color: #fff;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #555;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #630c54;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #870b75;
+    }
+
+    /* Price Section */
+    .price-display {
+      font-size: 18px;
+      color: #630c54;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* QR Code */
+    .qr-code {
+      text-align: center;
+      margin-top: 20px;
+      display: none; /* Hidden initially */
+    }
+
+    .qr-code img {
+      max-width: 200px;
+    }
+
+    /* Footer */
+    footer {
+      background: #27031f;
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>DIVINE Delight</h1>
+    </div>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="aboutus.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Booking Form Section -->
+  <main>
+    <div class="form-container">
+      <h2>Book Your Event</h2>
+      <form id="eventForm">
+        <!-- Personal Information -->
+        <h3>Personal Information</h3>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required>
+
+        <!-- Event Details -->
+        <h3>Event Details</h3>
+        <label for="event-type">Event Type:</label>
+        <select id="event-type" required>
+          <option value="">--Select--</option>
+          <option value="wedding">Wedding</option>
+          <option value="conference">Conference</option>
+          <option value="party">Party</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" min="1" required>
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event-date" required>
+        
+        <label for="event-time">Event Time:</label>
+        <input type="time" id="event-time" name="event-time" required>
+        
+        
+        
+        <!-- Venue Information -->
+        <h3>Venue Information</h3>
+        <label for="venue">Preferred Venue:</label>
+        <input type="text" id="venue" name="venue">
+        
+        <label for="venue-address">Venue Address:</label>
+        <textarea id="venue-address" name="venue-address"></textarea>
+        
+        <!-- Services Needed -->
+        <h3>Services Needed</h3>
+        <label><input type="checkbox" name="services" value="catering"> Catering</label>
+        <label><input type="checkbox" name="services" value="decoration"> Decoration</label>
+        <label><input type="checkbox" name="services" value="photography"> Photography/Videography</label>
+        <label><input type="checkbox" name="services" value="entertainment"> Entertainment</label>
+        
+        <!-- Additional Requests -->
+        <label for="additional-notes">Additional Requests/Notes:</label>
+        <textarea id="additional-notes" name="additional-notes"></textarea>
+
+        <div class="price-display" id="priceDisplay">Total Price: ₹0</div>
+
+        <!-- Agree Checkbox -->
+        <label>
+          <input type="checkbox" id="agree" required> I agree to the terms and conditions
+        </label>
+
+        <!-- Payment QR Code -->
+        <div class="qr-code" id="qrCode">
+          <p>Please scan this QR code to make the payment:</p>
+          <img src="qr.jpg" alt="Payment QR Code">
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Booking</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>No 769, 1st Cross, Devanahalli Town, Bangalore Rural 562110</p>
+    <p>Contact: +91-9916804439 | Email: chandanagovindaraju675@gmail.com</p>
+    <p>Copyright © 2024 Divine Delight Events</p>
+  </footer>
+
+  <!-- JavaScript for Price Calculation and QR Code -->
+  <script>
+    const eventType = document.getElementById("event-type");
+    const priceDisplay = document.getElementById("priceDisplay");
+    const agreeCheckbox = document.getElementById("agree");
+    const qrCode = document.getElementById("qrCode");
+    const form = document.getElementById("eventForm");
+
+    // Event Pricing
+    const prices = {
+      wedding: 200000,
+      conference: 60000,
+      party: 70000,
+      other: 60000
+    };
+
+    eventType.addEventListener("change", () => {
+      const selectedEvent = eventType.value;
+      const price = prices[selectedEvent] || 0;
+      priceDisplay.textContent = `Total Price: ₹${price}`;
+    });
+
+    // Show QR Code on Checkbox
+    agreeCheckbox.addEventListener("change", () => {
+      if (agreeCheckbox.checked) {
+        qrCode.style.display = "block";
+      } else {
+        qrCode.style.display = "none";
+      }
+    });
+
+    // Form Submission
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const guests = document.getElementById("guests").value;
+
+      alert(`Thank you, ${name}. We will contact you shortly via ${email} or ${phone}.`);
+      
+      // Add backend email logic here using tools like PHP, Node.js, or Email APIs.
+    });
+  </script>
+</body>
+</html>

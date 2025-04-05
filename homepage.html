@@ -1,0 +1,447 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIVINE DelighT</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ebcde9;
+            color: #221e1e;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Smooth scroll effect */
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background:#b88bb6;
+            color: #fffdfd;
+        }
+
+        header .logo h1 {
+            color: #f8f4f8;
+            font-size: 60px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fafafa;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e9e5e9;
+        }
+
+        .call-now-btn {
+            background: #810d68;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .call-now-btn:hover {
+            background: #5b2c56;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('back.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 500px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .hero-button {
+            background: #b88bb6;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background: #5b2c56;
+        }
+
+        /* Form Section */
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: center;
+            z-index: 3;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-container textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .form-container button {
+            background: #b88bb6;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background: #5b2c56;
+        }
+
+        /* Our Services Section */
+        .services-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: #fdfdfd;
+            color: #27031f;
+        }
+
+        .services-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .services-desc {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card h3 {
+            margin: 15px 0;
+            font-size: 20px;
+        }
+
+        .know-more-btn {
+            display: inline-block;
+            margin: 10px 0 20px;
+            padding: 10px 20px;
+            background: #b88bb6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .know-more-btn:hover {
+            background: #5b2c56;
+        }
+
+
+
+        /* How It Works Section */
+.how-it-works-section {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+    color: #333;
+}
+
+.how-it-works-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.how-it-works-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+.how-it-works-section strong {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+        /* WhatsApp Icon */
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 3;
+        }
+
+        .whatsapp-icon img {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-icon img:hover {
+            transform: scale(1.1);
+        }
+        .about-section {
+            background: #333;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .about-section p {
+            color: #ddd;
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #b88bb6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            background: #5b2c56;
+        }
+
+        
+     
+
+        /* Footer Section */
+        footer {
+            background: #27031f;
+            color: #ddd;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #b88bb6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+            
+            <h1>DIVINE Delight</h1>
+        </div>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="#services">Services</a>
+            <a href="aboutus.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+          
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Every event is beautiful,<br>we make it unique!</h1>
+            <p>Contact us to make your dream event come to life.</p>
+            <a href="contact.html" class="hero-button">LET'S TALK!</a>
+        </div>
+        <div class="form-container">
+            <h3>Get a Callback</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Mobile Number" required>
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">GET A CALLBACK</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
+        <p class="services-desc">
+            We offer a wide range of event management services to make it a memorable experience for you.
+        </p>
+        <div class="services-container">
+            <div class="service-card">
+                <img src="corporate-events.jpg" alt="Corporate Events">
+                <h3>Corporate Events</h3>
+                <a href="booknow.html" class="know-more-btn">BOOk NOW →</a>
+            </div>
+            <div class="service-card">
+                <img src="personalized-events.jpg" alt="Personalized Events">
+                <h3>Personalized Events</h3>
+                <a href="booknow.html" class="know-more-btn">BOOK Now →</a>
+            </div>
+            <div class="service-card">
+                <img src="community-carnivals.jpg" alt="Community Carnivals">
+                <h3>Community Carnivals</h3>
+                <a href="booknow.html" class="know-more-btn">BOOK NOW →</a>
+            </div>
+        </div>
+    
+    </section
+
+    <!-- How It Works Section -->
+<section id="how-it-works" class="how-it-works-section">
+    <div class="how-it-works-content">
+        <h2>HOW IT WORKS</h2>
+        <p>
+            <strong>LEARN: WE WANT TO GET TO KNOW YOU</strong><br>
+            WHAT IS YOUR BUSINESS ABOUT? WHAT ARE YOUR CHALLENGES? WHAT ARE THE ISSUES THAT YOUR MEMBERS OR CLIENTS ARE DEALING WITH? 
+            BY THOROUGHLY UNDERSTANDING YOUR COMPANY'S LEADERSHIP CULTURE, HOW YOUR ORGANIZATION OPERATES AND YOUR LONG TERM STRATEGIC PLANS, 
+            WE BECOME A PART OF YOUR TEAM. OUR MODEL WORKS BEST WHEN WE CAN BECOME MORE THAN THE "HIRED HELP" AND CAN BECOME STRATEGIC EVENT MANAGEMENT 
+            PARTNERS, SO THE FIRST STEP FOR US IS ABOUT GETTING TO KNOW YOU AND YOUR BUSINESS.
+        </p>
+        <br>
+        <h2>BUILD: LET US DO THE HEAVY LIFTING</h2>
+        <p>
+            BECAUSE WE HAVE TAKEN THE TIME TO LEARN ABOUT YOUR BUSINESS AND THE GOALS OF YOUR EVENT, YOU CAN REST ASSURED THAT THE EVENT WILL BE ON TARGET 
+            AND IN LINE WITH YOUR OBJECTIVES. LEAVE THE PLANNING AND MANAGEMENT TO US. LET US LOOK AFTER THE DETAILS AND THE HEAVY LIFTING THAT COMES WITH 
+            PLANNING A PROFESSIONAL EVENT. FROM OUR NETWORK OF PREFERRED VENDORS, INDUSTRY CONNECTIONS AND YEARS OF EXPERIENCE, WE CAN DELIVER A FULL SERVICE 
+            EVENT MANAGEMENT EXPERIENCE. THE SPARK TEAM IS WELL EQUIPPED TO DELIVER A WORLD CLASS EVENT, EACH AND EVERY TIME. YOUR JOB IS TO RUN YOUR BUSINESS; 
+            OUR JOB IS TO RUN YOUR EVENT.
+        </p>
+    </div>
+</section>
+<!-- WhatsApp Icon -->
+<div class="whatsapp-icon">
+    <a href="https://wa.me/6360891235" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    </a>
+</div>
+</body>
+</html>  
+
+    <section id="about" class="about-section">
+        <h2>A Little About Us</h2>
+        <p>
+            There are hundreds and thousands of event management companies in Bangalore. 
+            The standout about DIVINE Delight is that we weave dreams, emotions, relations, 
+            and responsibilities to make your event memorable.
+        </p>
+        <a href="aboutus.html" class="learn-more-btn">KNOW MORE →</a>
+    </section>
+    <section id="contact" ">
+        <footer>
+            <p>No 769, 1st cross, 1st main, Devanahalli Town,
+                Bangalore Rural 562110 | Contact: +91-6360891235 | Email: info@divinedelightevents.com</p>
+            <p>Copyright © 2024 Divine Delights Events and Productions</p>
+        </footer>
+</section>
+</body>
+</html>
